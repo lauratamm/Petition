@@ -224,7 +224,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="causes.json" />
+    <Content Include="Content\causes.json" />
     <Content Include="App_Data\causes.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <EmbeddedResource Include="passion.jpg" />

@@ -1,5 +1,33 @@
 ﻿
+var dataArray = new Array();
+
 $(document).ready(function () {
+
+
+
+
+    var jqxhr = $.getJSON("/Content/causes.json", function () {
+        console.log("success");
+    })
+  .done(function () {
+      console.log("second success");
+  })
+  .fail(function () {
+      console.log("error");
+  })
+  .always(function () {
+      console.log("complete");
+  });
+
+    $.getJSON("/Content/causes.json", function (data) {
+        $.each(data, function (key, val) {
+            $("#causesTable").append("<tr><td>" + val[0] +
+"</td><td>" + val[1] + "</td><td>" +
+val[2] + "</td></tr>");
+        });
+    })
+.done(function (data) { dataArray = data; });
+
 
     // highlight on hover - Admin table
     $(".tableRow").on("mouseover", function () {
