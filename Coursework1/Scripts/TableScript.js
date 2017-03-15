@@ -3,7 +3,7 @@ var dataArray = new Array();
 
 $(document).ready(function () {
 
-
+var coverimg = 
 
 
     var jqxhr = $.getJSON("/Content/causes.json", function () {
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     $.getJSON("/Content/causes.json", function (data) {
         $.each(data, function (key, val) {
-            $("#causesTable").append("<tr><td>" + val[0] +
+            $("#causesTable").append('<tr class="tableRow"><td>' + val[0] +
 "</td><td>" + val[1] + "</td><td>" +
 val[2] + "</td></tr>");
         });
