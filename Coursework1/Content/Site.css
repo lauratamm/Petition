@@ -1,0 +1,474 @@
+﻿/*overall and background styles*/
+body {
+    padding-top: 50px;
+    font-family:  'Varela Round', sans-serif  !important;
+    background-color: ghostwhite;
+}
+.rounded {
+    border-radius: 10px;
+    background-color: #f7d3b4;
+    border: 2px dashed #cc6600 ;
+    color: black;   
+    font-size: 16px;
+}
+
+.orange-font {
+    color: #c15517;
+}
+.text-justify {
+    text-align: justify;
+}
+
+
+/*make the homepage image reach the edges of the screen*/
+.container-fluid {    
+    padding-left: 0px;
+    padding-right: 0;}
+
+
+
+/*margins and padding*/
+.top-buffer {
+    margin-top: 30px;
+}
+.top-buffer-sm {
+    margin-top: 15px;
+}
+.top-padding {
+    padding-top:15px;
+}
+.padding-button {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.bottom-padding {
+    padding-bottom:15px;
+}
+.bottom-buffer {
+    margin-bottom:30px;
+}
+.bottom-buffer-sm {
+    margin-bottom:30px;
+}
+
+
+/*horizontal rule*/
+.hr {
+    border-bottom: 2px dashed #cc6600 ;
+}
+
+/*navbar*/
+.navbar  {
+    opacity:0.9;
+    padding-left: 5px; 
+}
+.navbar-btn {
+    margin-right: 20px;}
+
+.navbar-brand {
+    font-weight: bold;}
+
+.pull-right a {
+    font-weight: bold;}
+
+#linkToPetitionFormBtn {
+    padding: 6px 12px;
+    color: white;
+   background-color: #428bca;
+}
+#linkToPetitionFormBtn:hover {
+     background-color: #3276b1;
+}
+
+
+/*images*/
+.headerimg {  
+    background: url('http://www.eartheclipse.com/wp-content/uploads/2016/02/causes-of-deforestation-logging.jpg');
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    position:relative ;
+    height:30em;
+}
+.sharing>.petition-cover-img img {
+    height: 150px;
+}
+.petition-cover-img img {
+    width:100%;
+}
+/*check this one*/.img-center {margin: 0px, auto;}
+
+/*check this one*/#blahimg {margin:auto;}
+
+tr img {margin: 10px 0;}
+
+.petition-cover-img img {
+        height: 25vh; 
+    }
+.sharing-links img {
+    height: 25px;
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+/*forms*/
+#signatureForm {
+    display: none !important;
+}
+.menuLogin {
+    background-color: #222222;
+    opacity:0.9;
+    padding: 10px;
+    width: 250px;
+}
+form input {
+    margin-bottom: 10px; 
+    max-width:500px;
+}
+input,
+select,
+textarea {
+    max-width: 500px;
+}
+
+textarea.form-control {
+    height:150px;
+    resize: none;
+}
+.sharing, .enterYourDetails, .signInTarget {
+    display: none;
+}
+.searchForm {
+    padding-left: 0px;
+}
+#searchFormTitle {
+    margin-left: 15px;
+}
+
+/*progress bar*/
+#step1, #step2 {
+    border-right: solid white;
+}
+
+#step2, #step3 {
+    background-color:  #999999;
+}
+
+/*titles*/
+.headerimg h1  {font-family: 'Varela Round', sans-serif !important;
+    text-align: center;
+    color: white;
+    position: absolute;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 4px 2px 2px black;
+}
+
+
+
+
+/*display signatories*/
+#signatories span {
+  border-radius: 10px;
+    background-color: #f7d3b4;
+    border: 2px dashed #cc6600 ;
+    color: black;
+    font-size: 16px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+
+
+
+/*error messages*/
+.error p {
+    color: red;}
+
+
+/*tables*/
+#AdminCausesTable td {vertical-align: middle;}
+tr {
+    border-bottom: 2px dashed #cc6600;
+    border-top: 2px dashed #cc6600;
+}
+td div {  
+        overflow:hidden;   
+    } 
+
+
+
+/*numbered circles representing stages of creating a petition*/
+.numberCircle {
+    border-radius: 50%;
+    width: 40px; 
+    font-size: 20px;
+    border: 2px dashed #cc6600 ;
+    background-color: #f7a765;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;  
+}
+.numberCircle span {
+    font-family: Arial, Verdana;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    padding-right: 0px;
+   text-shadow: black 0.1em 0.1em 0.2em;
+}
+.circleRelative {
+    position: relative;
+    text-align: center;                
+}
+.steps span { 
+    color: white !important;
+    line-height: 40px;
+    display: block;
+    font-size: 16px;
+    text-shadow: 4px 2px 2px black;
+}
+.stages {
+    color: white;
+    position: absolute;
+    float: left; 
+    top: 75% ;
+}
+
+
+/*search bar*/
+#searchbar {
+    width: 200px!important ;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#searchbar:focus {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/*xs */
+@media screen and (max-width: 500px) {
+    .container.navbar {
+        min-width:275px;
+    }
+    .rounded {padding-left: 5px;
+              padding-right: 5px;
+              margin-top: 10px;
+    }
+
+    form h3 {
+        font-size: 1.2em;
+    }
+
+     h2 {
+        font-size: 1.5em;
+    }
+    label {
+        font-size: 0.9em;
+    }
+
+    .progress {
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+    .siteDesc p {
+        font-size:0.9em;}
+    
+    h1, h3 {
+        font-size: 1.3em;
+     }
+
+    .headerimg {
+       height:50vh;
+       min-height:15em;}
+
+    .table img {
+        height: 60px; 
+        width: 100px;}
+
+      td div {  
+        height: 50px;  
+    }
+
+    .petition-cover-img img {
+        min-height: 100px;
+    }
+
+    .signatureCounter span {
+        font-size: 1.4em;
+
+    }
+
+    .signatureCounter p {
+        font-size: 0.9em;
+
+    }
+
+}
+
+/*xs > sm */
+@media screen and (min-width: 501px) and (max-width: 767px) {
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    
+    .siteDesc p {
+        font-size:1.1em;}
+    
+    h1, h2, h3 {
+        font-size: 1.6em;
+    }
+
+    .headerimg {
+       height:65vh;
+       min-height: 25em;
+    }
+
+     .steps span {
+    font-size: 1.2em;
+    margin-top: 10px;
+    }
+
+
+    .table img {
+        height: 90px; 
+        width: 120px;}
+
+    .petition-cover-img img {
+        min-height: 120px;
+    }
+
+      td div {  
+        height: 73px;  
+    } 
+
+      td.visible-xs {
+          display: none !important;
+      }
+
+      .visible-xs {
+          display: none !important;
+      }
+
+       .col-xsm-6 {width: 50%;}
+}
+
+
+/* > sm */
+@media screen and (min-width: 768px) {
+    .siteDesc p {
+        font-size:1.2em; 
+        margin-top: 20px;    
+    }
+
+    
+    h1 {
+    font-size: 1.9em;
+    }
+
+
+     .headerimg {
+        height:70vh;
+        min-height: 30em;
+    }
+
+    .petition-cover-img img {
+        min-height: 150px;
+    }
+
+     .table img {
+        height: 100px; 
+        width: 140px;}
+
+      td div {  
+        height: 85px;  
+    } 
+}
+
+/* >md */
+@media screen and (min-width: 992px) {
+    
+    
+    h1 {
+        font-size: 2.0em;
+    }
+    .headerimg {
+        height:70vh;
+        min-height: 30em;
+    }
+
+    .steps span {
+    font-size: 1.2em;
+    margin-top: 10px;
+    }
+
+    .petition-cover-img img {
+        min-height: 180px;
+    }
+
+    td div {  
+        height: 95px;  
+    } 
+
+    .table img {
+        height: 120px; 
+        width: 160px;}
+}
+
+/* >lg */
+@media screen and (min-width: 1200px) {
+    .siteDesc p {
+        font-size:1.4em;
+        margin-top: 20px;
+    }
+    
+    h1 {
+        font-size: 2.3em;
+    }
+    .headerimg {
+        height: 70vh;
+        min-height: 35em;
+    }
+
+    .numberCircle {
+        width: 50px;
+        
+    }
+    .numberCircle span {
+        line-height: 50px;
+        font-size: 30px;
+        
+    }
+
+    .steps span {
+        font-size: 1.5em;
+        margin-top: 30px;
+    }
+
+    .table img {height: 140px; width: 180px;}
+
+    td div {  
+        height: 115px; 
+        overflow:hidden;   
+    } 
+}
+
+
+
+
+

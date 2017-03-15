@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/Site.css">
+   
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/loginScript.js"></script>
+    <script src="~/Scripts/PetitionFormScript.js"></script>
+    <script src="~/Scripts/SignPetition.js"></script>
+    <script src="~/Scripts/TableScript.js"></script>
+
+
+    <title>@ViewBag.Title -Petition signing place</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <!-- navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <!--menu icon on small screens-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavBarCollapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/Home/Index">Vote With Your Wallet</a>
+                </div>
+
+                 @* Make sure on mobile the dropdown does not cover the whole screen *@
+                <!--collapse navbar and display in a dropdown menu on a small screen-->
+                <div class="collapse navbar-collapse" id="NavBarCollapse">
+                   
+                    <!--links-->
+                    <ul class="nav navbar-nav ">
+                        <li><a href="/AllPetitions/AllPetitions">All Petitions</a></li>
+                        <li><a href="/Form/PetitionForm" id="linkToPetitionFormBtn" class="navbar-btn btn btn-primary">Create a petition</a></li>
+                    </ul>
+
+                    <!--login and register-->
+                    <ul class="nav navbar-nav pull-right" id="welcome">
+                        <li class="dropdown hidden" id="menuLogin">
+                            <button class="dropdown-toggle btn-danger btn navbar-btn" href="#" data-toggle="dropdown">Login or Register</button>
+
+                            <div class="dropdown-menu menuLogin">
+                                <!--display in tabs-->
+                                <ul class="nav nav-tabs nav-justified">                                 
+                                    <li class="active"> <a data-toggle="tab" href="#login">Sign in</a> </li>
+                                    <li> <a data-toggle="tab" href="#register">Register</a> </li>
+                                </ul>
+
+                                <!--login tab-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active dropdown-login">
+                                        <form id="formLogin" method="post" action="">
+                                           
+                                            <div class="form-group ">
+                                                <label for="email">Email</label> <br />
+                                                <input class="form-control emailLogin" name="email"  type="email" placeholder="Please enter your email">
+                                                <div id="emailError" class="error"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="password">Password</label> <br>
+                                                <input class="form-control passwordLogin" name="password"  type="password" placeholder="Please enter your password">
+                                                <div id="passwordError" class="error"></div>
+                                            </div>
+
+                                            <button type="button"  class="btnLogin btn btn-success btn-block" disabled>Login</button>
+                                               
+                                        </form>
+                                    </div>
+                                    
+
+                                    <!--register tab-->
+                                    <div id="register" class="tab-pane fade">
+                                        <form id="formRegister" method="post" action="">
+
+                                            <div class="form-group ">
+                                                <label for="name">Firstname</label> <br />
+                                                <input class="form-control" name="firstname" id="firstname" type="text" placeholder="Please enter your firstname">
+                                                <div id="firstNameError" class="error"></div>
+                                            </div>
+
+                                            <div class="form-group ">
+                                                <label for="name">Surname</label> <br />
+                                                <input class="form-control" name="surname" id="surname" type="text" placeholder="Please enter your surname">
+                                                <div id="surNameError" class="error"></div>
+                                            </div>
+
+                                            <div class="form-group ">
+                                                <label for="email">Email</label> <br />
+                                                <input class="form-control" name="email" id="email" type="email" placeholder="Please enter your email">
+                                                <div id="emailError" class="error"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="password">Password</label> <br>
+                                                <input class="form-control" name="password" id="password" type="password" placeholder="Please enter your password">
+                                                <div id="passwordError" class="error"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="confirmPassword">Confirm password</label> <br>
+                                                <input class="form-control" name="confirmPassword" id="confirmPassword" type="password" placeholder="Please confirm your password">
+                                                <div id="passwordMatchError" class="error"></div>
+                                            </div>
+
+                                            <button type="button" id="btnRegister" class="btn btn-primary btn-block" disabled>Sign up</button>
+                                        </form>
+                                    </div>
+                                </div><!--.tab-content-->
+                            </div><!--dropdown-->
+                        </li>
+                    </ul>
+                </div><!--#NavBarCollapse-->
+            </div><!--container-->
+        </div><!--navbar-inner-->
+    </nav>
+    
+
+    
+
+        @RenderBody()
+   
+        @Scripts.Render("~/bundles/jquery")
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>   
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

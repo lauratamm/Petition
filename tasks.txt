@@ -1,0 +1,19 @@
+
+
+
+AJAX : JSON is often used to retrieve data from the server with AJAX.
+This is suitable because this way, retrieved data is presented to browser 
+environment and then using JavaScript can be manipulated and rendered.
+
+
+
+
+NICE TO HAVE
+slider on main page
+images for petitions
+
+
+MUST HAVE
+Check both view buttons work
+Write up how ajax will send stuff to the database for admin page and for petition form and login form
+Make a log out button
