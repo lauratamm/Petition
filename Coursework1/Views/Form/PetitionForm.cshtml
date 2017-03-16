@@ -52,97 +52,93 @@
 
                 <fieldset class="enterYourDetails" >
                  @*Fieldset Step2*@
-                <h3> <span class="glyphicon glyphicon-user"></span> Enter your details</h3>
+                    <h3> <span class="glyphicon glyphicon-user"></span> Enter your details</h3>
 
-                @*Login form *@
-                <div class="signInTarget" >
-                    <p> No account? <a href="#" id="clickToRegister">Register now </a>.</p>
-                    <div class="form-group ">
-                        <label for="emailLogin">Email</label>
-                        <input class="form-control emailLogin" name="email" type="email" placeholder="Please enter your email">
-                        <div class="emailErrorLogin error"></div>
+                    @*Login form *@
+                    <div class="signInTarget" >
+                        <p> No account? <a href="#" id="clickToRegister">Register now </a>.</p>
+                        <div class="form-group ">
+                            <label for="emailLogin">Email</label>
+                            <input class="form-control emailLogin" name="email" type="email" placeholder="Please enter your email">
+                            <div class="emailErrorLogin error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passwordLogin">Password</label> <br>
+                            <input class="form-control passwordLogin" name="passwordLogin" type="password" placeholder="Please enter your password">
+                            <div class="passwordErrorLogin error"></div>
+                        </div>
+                        <button type="button" id="btnPrevious" class="btn btn-primary pull-left bottom-buffer"><span class="glyphicon glyphicon-circle-arrow-left"> </span>&nbsp;&nbsp;&nbsp;Back </button>
+                        <button type="button" id="btnLoginPetitionForm" class= "btn btn-success pull-right bottom-buffer" disabled >Complete  &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
+
                     </div>
 
-                    <div class="form-group">
-                        <label for="passwordLogin">Password</label> <br>
-                        <input class="form-control passwordLogin" name="passwordLogin" type="password" placeholder="Please enter your password">
-                        <div class="passwordErrorLogin error"></div>
+                    <br />
+
+                    @*Register form*@
+                    <div class="registerTarget" id="formStep1">
+                        <p> Already have an account? <a href="#" id="clickToSignIn">Sign in </a>.</p>
+
+                        <div class="form-group ">
+                            <label for="firstnameRegister">Firstname</label> <br />
+                            <input class="form-control" name="firstnameRegister" id="firstnameRegister" type="text" placeholder="Please enter your firstname">
+                            <div class="firstNameErrorRegister error"></div>
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="surenameRegister">Surname</label> <br />
+                            <input class="form-control" name="surnameRegister" id="surnameRegister" type="text" placeholder="Please enter your surname">
+                            <div class="surNameErrorRegister error"></div>
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="emailRegister">Email</label> <br />
+                            <input class="form-control" name="emailRegister" id="emailRegister" type="email" placeholder="Please enter your email">
+                            <div class="emailErrorRegister error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passwordRegister">Password</label> <br>
+                            <input class="form-control" name="passwordRegister" id="passwordRegister" type="password" placeholder="Please enter your password">
+                            <div class="passwordErrorRegister error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm password</label> <br>
+                            <input class="form-control" name="confirmPassword" id="confirmPasswordPetitionForm" type="password" placeholder="Please confirm your password">
+                            <div class="passwordMatchError error"></div>
+                        </div>
+
+                         <button type="button" id="btnBack" class="btn btn-primary pull-left bottom-buffer" ><span class="glyphicon glyphicon-circle-arrow-left"> </span>&nbsp;&nbsp;&nbsp;Back </button>
+                        <button type="button" id="completePetitionViaReg" class="btn btn-success pull-right bottom-buffer" disabled>Complete &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
                     </div>
-                    <button type="button" id="btnPrevious" class="btn btn-primary pull-left bottom-buffer"><span class="glyphicon glyphicon-circle-arrow-left"> </span>&nbsp;&nbsp;&nbsp;Back </button>
-                    <button type="button" id="btnLoginPetitionForm" class= "btn btn-success pull-right bottom-buffer" disabled >Complete  &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
-
-                </div>
-
-                <br />
-
-                @*Register form*@
-                <div class="registerTarget" id="formStep1">
-                    <p> Already have an account? <a href="#" id="clickToSignIn">Sign in </a>.</p>
-
-                    <div class="form-group ">
-                        <label for="firstnameRegister">Firstname</label> <br />
-                        <input class="form-control" name="firstnameRegister" id="firstnameRegister" type="text" placeholder="Please enter your firstname">
-                        <div class="firstNameErrorRegister error"></div>
-                    </div>
-
-                    <div class="form-group ">
-                        <label for="surenameRegister">Surname</label> <br />
-                        <input class="form-control" name="surnameRegister" id="surnameRegister" type="text" placeholder="Please enter your surname">
-                        <div class="surNameErrorRegister error"></div>
-                    </div>
-
-                    <div class="form-group ">
-                        <label for="emailRegister">Email</label> <br />
-                        <input class="form-control" name="emailRegister" id="emailRegister" type="email" placeholder="Please enter your email">
-                        <div class="emailErrorRegister error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="passwordRegister">Password</label> <br>
-                        <input class="form-control" name="passwordRegister" id="passwordRegister" type="password" placeholder="Please enter your password">
-                        <div class="passwordErrorRegister error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm password</label> <br>
-                        <input class="form-control" name="confirmPassword" id="confirmPasswordPetitionForm" type="password" placeholder="Please confirm your password">
-                        <div class="passwordMatchError error"></div>
-                    </div>
-
-                     <button type="button" id="btnBack" class="btn btn-primary pull-left bottom-buffer" ><span class="glyphicon glyphicon-circle-arrow-left"> </span>&nbsp;&nbsp;&nbsp;Back </button>
-                    <button type="button" id="completePetitionViaReg" class="btn btn-success pull-right bottom-buffer" disabled>Complete &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
-                </div>
                
-            </fieldset>
-
-           
-        </form>  
+                </fieldset>   
+            </form>  
 
             @*Page for reviewing/sharing*@
-            <div class="sharing" >
+            <div class="sharing row" >
          
                 <h3 class="orange-font text-center"> <span class="glyphicon glyphicon-share"></span> Your petition has been created!</h3>
                 
-                <div class="petition-cover-img row">
-                    <img class="img-rounded top-buffer bottom-buffer" src="~/img-placeholder.png" />
-                </div>
-                 <p class="lead orange-font text-center" id="titleDisplay"></p> 
-                  
-                <p class="orange-font bottom-buffer" id="descriptionDisplay"></p>
+            
 
-                <div class="sharing-links">
+                    <div class="sharing-links top-buffer">
                     
-                    <p class="orange-font">
-                    Get URL:
-                    <br>
-                    [link]
-                    <br /> <br />
-                    Share on social media:</p>
-                    <img src="~/F_icon.png" />
-                    <br />
-                    <img src="~/Twitter-icon.png" />
-                </div>
-
+                        <p class="orange-font text-center">
+                            Get URL:
+                            <br>
+                            [link]
+                            <br /> <br />
+                            Share on social media:
+                            <br />
+                            <br />
+                            <img src="~/F_icon.png" />
+                
+                            <img src="~/Twitter-icon.png" />
+                        </p>
+                    </div>
+               
                 <!--go to the url of the petition page - currently hardcoded but will be dynamically retrieved-->
                 <button type="button" id="btnView" class="btn btn-success pull-right bottom-buffer">View &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
                  

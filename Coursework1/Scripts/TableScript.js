@@ -42,10 +42,10 @@ $(document).ready(function () {
 
     //view petition 
    $(".hoverRow").on("click", function () {
-        window.location.href = "/Signature/ViewPetition";
+       window.location.href = "/AllPetitions/ViewPetition";
     });
    $("#causesTable tr").on("click", function () {
-       window.location.href = "/Signature/ViewPetition";
+       window.location.href = "/AllPetitions/ViewPetition";
    });
 
     //delete petition

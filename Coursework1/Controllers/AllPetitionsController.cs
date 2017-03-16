@@ -13,5 +13,10 @@ namespace Coursework1.Controllers
         {
             return View();
         }
+
+        public ActionResult ViewPetition()
+        {
+            return View();
+        }
     }
 }

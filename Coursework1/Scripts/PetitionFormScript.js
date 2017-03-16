@@ -21,6 +21,21 @@ function isNameValid(name) {
 
 $(document).ready(function () {
 
+    //make number circles into a link
+    $(".stages").mouseover(function () {
+        $(this).css('cursor', 'pointer')
+
+    });
+    $(".stages").click(function () {
+        window.location.href = "/Form/PetitionForm"
+    });
+
+    //'create petition' button for xs screen linking to the form
+    $("#xs-screen-petitionBtn").click(function () {
+        window.location.href = "/Form/PetitionForm";
+    })
+
+
     //if 'create a petition button' is clicked and user is logged in, display a shorter form
 
     checkCookie();
@@ -390,7 +405,7 @@ $(document).ready(function () {
     });
 
     $("#btnView").click(function () {
-        window.location.href = "/Signature/ViewPetition";
+        window.location.href = "/AllPetitions/ViewPetition";
     })
     
 

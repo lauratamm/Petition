@@ -30,9 +30,6 @@ function checkCookie() {
     var username = getCookie("username");
     if (username != "") {
         //replace login menu with greeting message
-        $("#welcome").empty();
-        $("#welcome").append("Welcome, " + username);
-        $("#welcome").addClass("welcome");
         $("#logout").removeClass("hidden");
         $("#menuLogin").addClass("hidden");
 
@@ -86,6 +83,7 @@ $(document).ready(function () {
         passwordTarget.empty();
         $(this).css("border-color", "white");
         var password = $('#passwordLoginDropdown').val();
+
         if (password != '') {
             isPasswordValid(password);
             if (isPasswordValid(password)) {
@@ -100,9 +98,9 @@ $(document).ready(function () {
     });
 
     //enable or disable login button
-    $(".dropdown-login input").on("keyup", function () {
-        var password = $.trim($('#password').val());
-        var email = $.trim($('#email').val());
+    $("#formLogin input").on("keyup", function () {
+        var password = $.trim($('#passwordLoginDropdown').val());
+        var email = $.trim($('#emailLoginDropdown').val());
         console.log(email);
         console.log(password);
         if (!isPasswordValid(password) || !isValidEmailAddress(email)) {
@@ -117,8 +115,9 @@ $(document).ready(function () {
 
     //when email and password are validated, sign in (add email/password match in the database 
     $("#btnLogin").on("click", function () {
-        var email = $('#email').val();
+        var email = $('#emailLoginDropdown').val();
         setCookie("username", email, 365);
+        window.location.href = window.location.href;
         checkCookie();
     });
 
@@ -218,7 +217,7 @@ $(document).ready(function () {
     })
 
     //enable or disable button
-    $(".dropdown input").on("keyup", function () {
+    $("#registerDropdown").on("keyup", function () {
         var firstname = $.trim($('#firstnameDropdown').val());
         var surname = $.trim($('#surnameDropdown').val());
         var email = $.trim($('#emailRegisterDropdown').val());

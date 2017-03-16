@@ -19,6 +19,13 @@ body {
     text-align: justify;
 }
 
+.petitionBackground {
+    background-color: ghostwhite;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 /*make the homepage image reach the edges of the screen*/
 .container-fluid {    
@@ -81,7 +88,6 @@ body {
 }
 .welcome {    
     padding: 15px 15px;
-    font-size: 18px;
     line-height: 20px;
     color: #999999;
 }
@@ -125,6 +131,7 @@ tr img {margin: 10px 0;}
     opacity:0.9;
     padding: 10px;
     width: 250px;
+    color:white;
 }
 form input {
     margin-bottom: 10px; 
@@ -411,6 +418,9 @@ td .lead {
         height: 85px;  
     } 
 }
+
+
+
 
 /* >md */
 @media screen and (min-width: 992px) {
