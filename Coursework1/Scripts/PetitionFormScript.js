@@ -8,7 +8,7 @@ function isValidEmailAddress(email) {
 
 //password pattern
 function isPasswordValid(password) {
-    var passwordPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    var passwordPattern = /^.{8,}$/;
     return passwordPattern.test(password);
 
 };
@@ -155,12 +155,13 @@ $(document).ready(function () {
 
 
     //validate password on blur
-    $("#passwordLogin").blur(function () {
+    $(".passwordLogin").blur(function () {
 
         passwordTargetLogin.empty();
         $(this).css("border-color", "white");
-        var password = $.trim($('#passwordLogin').val());
-        var email = $.trim($('#emailLogin').val());
+        var password = $.trim($('.passwordLogin').val());
+        console.log(password);
+        var email = $.trim($('.emailLogin').val());
 
         if (password != '') {
             isPasswordValid(password);
@@ -178,8 +179,8 @@ $(document).ready(function () {
 
     //enable or disable the 'complete' button
     $(".signInTarget input").on("keyup", function () {
-        var password = $.trim($('#passwordLogin').val());
-        var email = $.trim($('#emailLogin').val());
+        var password = $.trim($('.passwordLogin').val());
+        var email = $.trim($('.emailLogin').val());
 
         if (!isPasswordValid(password) || !isValidEmailAddress(email)) {
             $('#btnLoginPetitionForm').prop("disabled", true);
@@ -197,8 +198,8 @@ $(document).ready(function () {
 
     //move to the next step when password and email are validated
     $("#btnLoginPetitionForm").on("click", function () {
-        var email = $.trim($('#emailLogin').val());
-        var password = $.trim($('#passwordLogin').val());
+        var email = $.trim($('.emailLogin').val());
+        var password = $.trim($('.passwordLogin').val());
         if (isValidEmailAddress(email) && isPasswordValid(password) && (password != '') && (email != '')) {
             //set cookie
             setCookie("username", email, 365);
@@ -320,6 +321,8 @@ $(document).ready(function () {
         matchTargetRegister.empty();
         var confirmPsw = $.trim($("#confirmPasswordPetitionForm").val());
         var password = $.trim($('#passwordRegister').val());
+        console.log(password);
+        console.log(confirmPsw);
         if (password !== confirmPsw) {
             matchTargetRegister.append("<p>Passwords do not match!</p>");
             $("#confirmPasswordPetitionForm").css("border-color", "red");
@@ -346,7 +349,6 @@ $(document).ready(function () {
     })
     
   
-
     //move back to the previous fieldset
     $("#btnPrevious").on("click", function () {
         current_fs = $(this).parent().parent();
@@ -365,23 +367,8 @@ $(document).ready(function () {
         $(".error").empty();
     })
 
-    //read in an image from user files
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
 
-            reader.onload = function (e) {
-                $("#blah").css("height, 250px");
-                $('#blahimg').attr('src', e.target.result);               
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    $("#imgInp").change(function () {
-        readURL(this);
-    });
-
- 
+    //complete petition form via registration and review
     $("#completePetitionViaReg").on("click", function () {
         var email = $.trim($('#emailRegister').val());
         setCookie("username", email, 365);
@@ -400,8 +387,6 @@ $(document).ready(function () {
         });
         $("#titleDisplay").append(title);
         $("#descriptionDisplay").append(description);
- 
-
     });
 
     $("#btnView").click(function () {

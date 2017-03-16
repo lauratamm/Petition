@@ -79,6 +79,12 @@ body {
 #linkToPetitionFormBtn:hover {
      background-color: #3276b1;
 }
+.welcome {    
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #999999;
+}
 
 
 /*images*/
@@ -189,15 +195,21 @@ textarea.form-control {
 
 
 /*tables*/
-#AdminCausesTable td {vertical-align: middle;}
+#AdminCausesTable td {
+    vertical-align: middle;
+    padding: 10px 0;
+}
 tr {
     border-bottom: 2px dashed #cc6600;
     border-top: 2px dashed #cc6600;
 }
 td div {  
         overflow:hidden;   
+        margin-bottom: 8px;
     } 
-
+td .lead {
+    margin-top: 10px;
+}
 
 
 /*numbered circles representing stages of creating a petition*/
@@ -262,9 +274,7 @@ td div {
 
 /*xs */
 @media screen and (max-width: 500px) {
-    .container.navbar {
-        min-width:275px;
-    }
+   
     .rounded {padding-left: 5px;
               padding-right: 5px;
               margin-top: 10px;
@@ -294,7 +304,9 @@ td div {
 
     .headerimg {
        height:50vh;
-       min-height:15em;}
+       min-height:15em;
+       min-width:270px;
+    }
 
     .table img {
         height: 60px; 

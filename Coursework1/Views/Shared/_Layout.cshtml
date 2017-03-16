@@ -44,11 +44,14 @@
                         <li><a href="/AllPetitions/AllPetitions">All Petitions</a></li>
                         <li><a href="/Form/PetitionForm" id="linkToPetitionFormBtn" class="navbar-btn btn btn-primary">Create a petition</a></li>
                     </ul>
-
+                   
                     <!--login and register-->
-                    <ul class="nav navbar-nav pull-right" id="welcome">
+                    <ul class="nav navbar-nav pull-right">
+                        <li id="welcome"></li>
+                       <li  class="nav navbar-nav pullright"><button class="hidden btn-danger btn navbar-btn  " href="#" id="logout">Log out</button></li>
                         <li class="dropdown hidden" id="menuLogin">
                             <button class="dropdown-toggle btn-danger btn navbar-btn" href="#" data-toggle="dropdown">Login or Register</button>
+                            
 
                             <div class="dropdown-menu menuLogin">
                                 <!--display in tabs-->
@@ -64,17 +67,17 @@
                                            
                                             <div class="form-group ">
                                                 <label for="email">Email</label> <br />
-                                                <input class="form-control emailLogin" name="email"  type="email" placeholder="Please enter your email">
+                                                <input class="form-control" id="emailLoginDropdown" name="email"  type="email" placeholder="Please enter your email">
                                                 <div id="emailError" class="error"></div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="password">Password</label> <br>
-                                                <input class="form-control passwordLogin" name="password"  type="password" placeholder="Please enter your password">
+                                                <input class="form-control" id="passwordLoginDropdown" name="password"  type="password" placeholder="Please enter your password">
                                                 <div id="passwordError" class="error"></div>
                                             </div>
 
-                                            <button type="button"  class="btnLogin btn btn-success btn-block" disabled>Login</button>
+                                            <button type="button"  id="btnLogin"class=" btn btn-success btn-block" disabled>Login</button>
                                                
                                         </form>
                                     </div>
@@ -86,44 +89,47 @@
 
                                             <div class="form-group ">
                                                 <label for="name">Firstname</label> <br />
-                                                <input class="form-control" name="firstname" id="firstname" type="text" placeholder="Please enter your firstname">
-                                                <div id="firstNameError" class="error"></div>
+                                                <input class="form-control" name="firstname" id="firstnameDropdown" type="text" placeholder="Please enter your firstname">
+                                                <div id="firstNameErrorDropdown" class="error"></div>
                                             </div>
 
                                             <div class="form-group ">
                                                 <label for="name">Surname</label> <br />
-                                                <input class="form-control" name="surname" id="surname" type="text" placeholder="Please enter your surname">
-                                                <div id="surNameError" class="error"></div>
+                                                <input class="form-control" name="surname" id="surnameDropdown" type="text" placeholder="Please enter your surname">
+                                                <div id="surNameErrorDropdown" class="error"></div>
                                             </div>
 
                                             <div class="form-group ">
                                                 <label for="email">Email</label> <br />
-                                                <input class="form-control" name="email" id="email" type="email" placeholder="Please enter your email">
-                                                <div id="emailError" class="error"></div>
+                                                <input class="form-control" name="email" id="emailRegisterDropdown" type="email" placeholder="Please enter your email">
+                                                <div id="emailErrorRegisterDropdown" class="error"></div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="password">Password</label> <br>
-                                                <input class="form-control" name="password" id="password" type="password" placeholder="Please enter your password">
-                                                <div id="passwordError" class="error"></div>
+                                                <input class="form-control" name="password" id="passwordRegisterDropdown" type="password" placeholder="Please enter your password">
+                                                <div id="passwordErrorRegisterDropdown" class="error"></div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="confirmPassword">Confirm password</label> <br>
-                                                <input class="form-control" name="confirmPassword" id="confirmPassword" type="password" placeholder="Please confirm your password">
-                                                <div id="passwordMatchError" class="error"></div>
+                                                <input class="form-control" name="confirmPassword" id="confirmPasswordDropdown" type="password" placeholder="Please confirm your password">
+                                                <div id="passwordMatchErrorDropdown" class="error"></div>
                                             </div>
 
-                                            <button type="button" id="btnRegister" class="btn btn-primary btn-block" disabled>Sign up</button>
+                                            <button type="button" id="btnRegisterDropdown" class="btn btn-primary btn-block" disabled>Sign up</button>
                                         </form>
                                     </div>
                                 </div><!--.tab-content-->
                             </div><!--dropdown-->
                         </li>
                     </ul>
+                   
                 </div><!--#NavBarCollapse-->
+              
             </div><!--container-->
         </div><!--navbar-inner-->
+
     </nav>
     
 

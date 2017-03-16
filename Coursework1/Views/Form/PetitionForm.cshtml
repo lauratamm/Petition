@@ -28,7 +28,7 @@
             <form id="formCreatePetition" method="post" action="" class="orange-font">
 
                 <fieldset class="enterPetitionDetails" >
-                    @*Fieldset step 2*@
+                    @*Fieldset step 1*@
                     <h3> <span class="glyphicon glyphicon-edit"></span> Create your cause</h3>
 
                     <div class="form-group ">
@@ -43,23 +43,18 @@
                         <div class="descriptionError error"></div>
                     </div>
 
-                    <div class="form-group ">
-                        <input type='file' class="form-control" id="imgInp" />
-                        <div id="blah">
-                            <img id="blahimg" class="bottom-buffer top-buffer img-thumbnail" src="#" alt="your image" />
-                        </div>
-                    </div>
+         
                     
-                    <button type="button" id="btnNext" class="btn btn-primary pull-right bottom-buffer" disabled>Next &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
+                    <button type="button" id="btnNext" class="btn btn-primary pull-right bottom-buffer" disabled>Complete &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
 
                 </fieldset>
 
 
                 <fieldset class="enterYourDetails" >
-                    @*Fieldset Step1*@
+                 @*Fieldset Step2*@
                 <h3> <span class="glyphicon glyphicon-user"></span> Enter your details</h3>
 
-                @*Login form - initially hidden*@
+                @*Login form *@
                 <div class="signInTarget" >
                     <p> No account? <a href="#" id="clickToRegister">Register now </a>.</p>
                     <div class="form-group ">
@@ -74,7 +69,7 @@
                         <div class="passwordErrorLogin error"></div>
                     </div>
                     <button type="button" id="btnPrevious" class="btn btn-primary pull-left bottom-buffer"><span class="glyphicon glyphicon-circle-arrow-left"> </span>&nbsp;&nbsp;&nbsp;Back </button>
-                    <button type="button" class="btnLogin btn btn-success pull-right bottom-buffer" disabled >Complete  &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
+                    <button type="button" id="btnLoginPetitionForm" class= "btn btn-success pull-right bottom-buffer" disabled >Complete  &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-circle-arrow-right"> </span></button>
 
                 </div>
 
@@ -123,6 +118,7 @@
            
         </form>  
 
+            @*Page for reviewing/sharing*@
             <div class="sharing" >
          
                 <h3 class="orange-font text-center"> <span class="glyphicon glyphicon-share"></span> Your petition has been created!</h3>
