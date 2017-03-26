@@ -1,8 +1,28 @@
-﻿
+﻿@model List<Coursework1.Models.Petition>
+
 @{
     ViewBag.Title = "AllPetitions";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@ViewBag.Message
+<div>
+    @foreach (var p in Model)
+    {
+        <p>@p.Id @p.Title </p>
+    }
+</div>
+
+<form action="/AllPetitions/Edit" method="GET">
+    <select name="id" size="5" style="width: 250px">
+        @foreach (var c in Model)
+        {
+            <option value="@c.Id">@c.Title</option>
+        }
+    </select>
+    <br />
+    <input type="submit" value="Edit" />
+</form>
 
 <div class="container">
 
